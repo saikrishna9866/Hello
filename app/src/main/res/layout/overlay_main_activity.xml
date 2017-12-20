@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/overlayLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/overlayBgColor"
+    android:orientation="vertical">
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="143dp"
+        android:buttonTint="@color/white"
+        android:text="@string/overlay_sample"
+        android:textSize="16sp"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/checkBox"
+        android:layout_alignRight="@+id/checkBox"
+        android:layout_below="@+id/checkBox"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        app:srcCompat="@drawable/arrow_up" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        android:text="@string/overlay_long_press_text"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_marginBottom="36dp"
+        app:srcCompat="@drawable/arrow_down" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView2"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginBottom="12dp"
+        android:textSize="16sp"
+        android:text="@string/overlay_double_tap_on_task"
+        android:textColor="@color/white" />
+</RelativeLayout>

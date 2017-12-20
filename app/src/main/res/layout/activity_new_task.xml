@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.NewTaskActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:id="@+id/user_info_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edTaskDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_task_definition"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences"
+                android:lines="3"
+                android:maxLines="3"
+                android:minLines="2"
+                android:text=""
+                android:textColor="@color/txt_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edForDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:hint="@string/hint_for_date"
+                    android:singleLine="true"
+                    android:textColor="@color/txt_gray"
+                    android:textIsSelectable="true" />
+
+                <ImageView
+                    android:id="@+id/imgViewDatePicker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight=".20"
+                    android:padding="8dp"
+                    android:src="@drawable/alarm" />
+
+                <EditText
+                    android:id="@+id/edForTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:hint="@string/hint_for_time"
+                    android:singleLine="true"
+                    android:textColor="@color/txt_gray"
+                    android:textIsSelectable="true" />
+
+                <ImageView
+                    android:id="@+id/imgViewTimePicker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight=".20"
+                    android:padding="8dp"
+                    android:src="@drawable/alarm" />
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edForTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_for_time"
+                    android:singleLine="true"
+                    android:layout_weight="0.05" />
+
+                <ImageView
+                    android:id="@+id/imgViewTimePicker1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight=".2"
+                    android:padding="8dp"
+                    android:src="@drawable/alarm" />
+            </LinearLayout>-->
+
+            <Spinner
+                android:id="@+id/spinnerTasks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/custom_spinner_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    style="@style/Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/custom_spinner_background"
+                    android:elevation="10dp"
+                    android:text="@string/btn_cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/txt_gray" />
+
+                <Button
+                    android:id="@+id/btnCreate"
+                    style="@style/Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/custom_spinner_background"
+                    android:elevation="10dp"
+                    android:text="@string/btn_create"
+                    android:textAllCaps="false"
+                    android:textColor="@color/txt_gray" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
